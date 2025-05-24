@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Sea Falcon",
+      "dwt": 75000,
+      "lat": 22.3,
+      "lon": 113.5,
+      "rating": 85
+    },
+    {
+      "id": 2,
+      "name": "Iron Runner",
+      "dwt": 65000,
+      "lat": 23.0,
+      "lon": 120.0,
+      "rating": 80
+    },
+    {
+      "id": 3,
+      "name": "Pacific Hope",
+      "dwt": 82000,
+      "lat": 20.5,
+      "lon": 118.0,
+      "rating": 90
+    }
+  ]
+  
