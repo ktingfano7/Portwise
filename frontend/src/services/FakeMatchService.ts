@@ -17,7 +17,7 @@ export type MatchResult = {
           };
         case "Indonesian Coal":
           return {
-            shipId: "IC998",
+            shipId: "IC098",
             cargo: "Indonesian Coal",
             etaDays: 15,
             voyagePlan: "Samarinda → Manila → Tianjin",

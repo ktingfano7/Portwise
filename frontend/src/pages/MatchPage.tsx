@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FakeMatchService, MatchResult } from "../services/FakeMatchService";
+import { FakeMatchService } from "../services/FakeMatchService";
+import type { MatchResult } from "../services/FakeMatchService";
 import MatchResultCard from "../component/MatchResultCard";
 
 const MatchPage = () => {

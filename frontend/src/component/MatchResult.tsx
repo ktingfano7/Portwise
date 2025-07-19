@@ -1,4 +1,5 @@
 import React from "react";
+import MatchResultCard from "../component/MatchResultCard";
 
 interface Props {
   cargoType: string;

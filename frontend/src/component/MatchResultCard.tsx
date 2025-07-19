@@ -1,42 +1,30 @@
-import { useState } from "react";
-import { MatchResultCard } from "./components/MatchResultCard";
+import React from "react";
+import type { MatchResult } from "../services/FakeMatchService";
 
-interface MatchResult {
-  shipId: string;
-  estimatedDays: number;
-  route: string[];
-  utilizationLoss: number;
-  totalDistance: number;
+interface Props {
+  result: MatchResult;
 }
 
-function App() {
-  const [result, setResult] = useState<MatchResult | null>(null);
-
-  const handleMatch = () => {
-    // 模拟点击匹配生成结果
-    const mockResult: MatchResult = {
-      shipId: "Vessel-3821",
-      estimatedDays: 17,
-      route: ["Port of Santos", "Singapore", "Qingdao"],
-      utilizationLoss: 7.5,
-      totalDistance: 9800,
-    };
-    setResult(mockResult);
-  };
-
+const MatchResultCard: React.FC<Props> = ({ result }) => {
   return (
-    <div className="min-h-screen bg-gray-900 p-6 text-white">
-      <h1 className="text-2xl font-bold mb-4">Portwise 智能匹配平台</h1>
-      <button
-        onClick={handleMatch}
-        className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded"
-      >
-        开始匹配
-      </button>
-
-      <MatchResultCard result={result} />
+    <div className="bg-zinc-800 p-4 rounded-xl text-white shadow-lg space-y-2">
+      <h2 className="text-xl font-bold border-b border-zinc-600 pb-1 mb-2">
+        匹配结果
+      </h2>
+      <div>
+        <strong>货种：</strong> {result.cargo}
+      </div>
+      <div>
+        <strong>匹配船只：</strong> {result.shipId}
+      </div>
+      <div>
+        <strong>预计送达时间：</strong> {result.etaDays} 天
+      </div>
+      <div>
+        <strong>航线：</strong> {result.voyagePlan}
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default MatchResultCard;
